@@ -6,7 +6,7 @@ import config
 DATABASE_URL = URL.create(
     "postgresql+psycopg2",
     username=config.DB_USER,
-    password=config.DB_PASS,
+    password=config.DB_PASSWORD,
     host=config.DB_HOST,
     port=config.DB_PORT,
     database=config.DB_NAME,
