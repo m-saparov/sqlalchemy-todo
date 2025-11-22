@@ -1,5 +1,7 @@
 from database import engine, metadata_obj
 from crud import create_task, get_tasks, delete_task, update_task, change_task_status
+from tables import tasks_table
+
 
 metadata_obj.create_all(engine)
 
@@ -20,6 +22,7 @@ while True:
         title = input("Enter task title: ")
         description = input("Enter task description: ")
         task_id = create_task(title, description)
+
         print("Created task ID:", task_id)
 
     elif choice == "2":
